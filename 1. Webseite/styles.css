@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background: #201D1D;
+    --p: white;
+    --border: #757575;
+}
+
+
+html {
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+
+
+}
+
+
+nav {
+    width: 1000px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: var(--background);
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border: 5px solid var(--border);
+    margin: auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+    transition: transform .25s .1s ease-in-out;
+    position: fixed;
+    z-index: 1;
+}
+
+.down nav {
+    transform: translate3d(0, -200px, 0);
+}
+
+section {
+    height: 1000px;
+
+}
+
+.vertikal_strich{
+    position: absolute;
+    height: 100vh;
+    width: 5px;
+    background-color: var(--border);
+    max-width: 90%;
+}
+
+.vertikal_strich:nth-child(1){
+    left: 500px;
+   
+}
+
+.vertikal_strich:nth-child(2){
+    left: 850px;
+}
+
+.vertikal_strich:nth-child(3){
+    left: 1150px;
+}
+
+.vertikal_strich:nth-child(4){
+    left: 1350px;
+}
+.vertikal_strich:nth-child(5){
+    left: 1550px;
+}
+
+.vertikal_strich:nth-child(6){
+    left: 1750px;
+}
+
+.vertikal_strich:nth-child(7){
+    left: 1950px;
+}
