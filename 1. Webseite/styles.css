@@ -1,12 +1,18 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
     --background: #201D1D;
     --p: white;
     --border: #757575;
+}
+
+h1{
+    font-size: 40px;
+    
 }
 
 
@@ -22,8 +28,18 @@ header {
     width: 100%;
     height: 100vh;
     background-color: var(--background);
+    display: flex;
+    justify-content: space-around;
 
 
+}
+
+section {
+    height: 1000px; 
+}
+
+.down nav {
+    transform: translate3d(0, -200px, 0);
 }
 
 
@@ -35,9 +51,10 @@ nav {
     max-width: 80%;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     align-items: center;
-    border: 5px solid var(--border);
+    /* border: 5px solid var(--border); */
+    border: 5px solid white;
     margin: auto;
     top: 50px;
     left: 0;
@@ -45,49 +62,147 @@ nav {
     transition: transform .25s .1s ease-in-out;
     position: fixed;
     z-index: 1;
+    
 }
 
-.down nav {
-    transform: translate3d(0, -200px, 0);
+nav a{
+    animation: einblenden ease-in-out 1.8s;
+
+    text-decoration: none;
+    color: white;
+    transition: 0.4s all;
 }
 
-section {
-    height: 1000px;
-
+nav a:hover{
+    text-decoration: none;
+    color: #FFC107;
 }
 
-.vertikal_strich{
-    position: absolute;
-    height: 100vh;
+
+
+.vertikal_strich {
+    height: 100%;
     width: 5px;
-    background-color: var(--border);
+    /* background-color: var(--border); */
+    background-color: white;
     max-width: 90%;
 }
 
-.vertikal_strich:nth-child(1){
-    left: 500px;
-   
+/* .vertikal_strich:nth-child(even) {
+    border-radius: 0px 0px 30px 30px;
+} */
+
+
+.vertikal_strich:nth-child(1) {
+    /* left: 500px; */
+    animation: reinfliegen ease-in-out 0.4s;
+    box-shadow: -6px 0px 12px rgb(82, 81, 81);
 }
 
-.vertikal_strich:nth-child(2){
-    left: 850px;
+.vertikal_strich:nth-child(2) {
+    /* left: 850px; */
+    animation: reinfliegen ease-in-out 0.6s;
+    box-shadow: -5px 0px 10px rgb(82, 81, 81);
 }
 
-.vertikal_strich:nth-child(3){
-    left: 1150px;
+.vertikal_strich:nth-child(3) {
+    /* left: 1150px; */
+    animation: reinfliegen ease-in-out 0.8s;
+    box-shadow: -4px 0px 8px rgb(82, 81, 81);
 }
 
-.vertikal_strich:nth-child(4){
-    left: 1350px;
-}
-.vertikal_strich:nth-child(5){
-    left: 1550px;
-}
-
-.vertikal_strich:nth-child(6){
-    left: 1750px;
+.vertikal_strich:nth-child(4) {
+    /* left: 1350px; */
+    animation: reinfliegen ease-in-out 1s;
+    box-shadow: -3px 0px 6px rgb(82, 81, 81);
 }
 
-.vertikal_strich:nth-child(7){
-    left: 1950px;
+.vertikal_strich:nth-child(5) {
+    /* left: 1550px; */
+    animation: reinfliegen ease-in-out 1.2s;
 }
+
+.vertikal_strich:nth-child(6) {
+    /* left: 1750px; */
+    animation: reinfliegen ease-in-out 1.4s;
+    box-shadow: 3px 0px 6px rgb(82, 81, 81);
+}
+
+.vertikal_strich:nth-child(7) {
+    /* left: 1950px; */
+    animation: reinfliegen ease-in-out 1.6s;
+    box-shadow: 4px 0px 8px rgb(82, 81, 81);
+}
+
+.vertikal_strich:nth-child(8) {
+    /* left: 2150px; */
+    animation: reinfliegen ease-in-out 1.8s;
+    box-shadow: 5px 0px 10px rgb(82, 81, 81);
+}
+
+.vertikal_strich:nth-child(9) {
+    /* left: 2350px; */
+    animation: reinfliegen ease-in-out 2s;
+    box-shadow: 6px 0px 12px rgb(82, 81, 81);
+
+}
+
+@keyframes einblenden {
+    from { opacity:0; }
+    to { opacity:1; }
+
+}
+
+@keyframes reinfliegen {
+    0% {
+        transform: translate(-45em);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+#roadmap{
+    border-top: white solid 5px;
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-around;
+}
+
+#roadmap .vertikal_strich {
+    opacity: 0;
+}
+
+#roadmap .vertikal_strich:nth-child(3) {
+    opacity: 1;
+}
+#roadmap .vertikal_strich:nth-child(6) {
+    opacity: 1;
+}
+
+
+#roadmap h2{
+    position:absolute;
+   width: 20vw;
+    padding: 50px;
+    font-size: 35px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display:grid;
+  
+  
+    
+}
+
+
+.roadmap_content{
+    color: white;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    margin-top: 50px;
+    border:  white solid 5px;
+}
+
